@@ -7,6 +7,7 @@ public class ObjetDetruire : MonoBehaviour
 {
     public GameObject ObjetADetruire;
     public GameObject ObjetADetruire2;
+    public GameObject ObjetADetruire3;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +15,13 @@ public class ObjetDetruire : MonoBehaviour
         {
             Destroy(ObjetADetruire);
             Destroy(ObjetADetruire2);
+            Invoke("Destroy", 3f);
         } 
+
+        
     }
+
+    void Destroy(){
+            Destroy(ObjetADetruire3);
+        }
 }
